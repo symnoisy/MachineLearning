@@ -3,12 +3,12 @@ import threading
 import secrets
 
 from rest import ml
-from config_variable import logger
+from configVariable import logger
 from flask_restplus.resource import Resource
 from flask import request
 from werkzeug.utils import secure_filename
 from werkzeug.datastructures import FileStorage
-from service_ml import MachineLearningService
+from serviceML import MachineLearningService
 from time import gmtime, strftime
 
 @ml.route('/', methods=['GET'])
@@ -31,3 +31,15 @@ class ReturnAllChallenges(Resource):
         mlservice = MachineLearningService()
         result_mlservice = mlservice.test()
         return result_mlservice
+
+@ml.route('/dnn', methods=['GET'])
+class ReturnAllURL(Resource):
+    '''
+    Deep Neural Network를 활용한 서비스
+    '''
+    @ml.doc(description='Deep Neural Network를 활용한 서비스의 모든 url을 반환합니다.')
+    def get(self):
+        result_allurl = {
+            'dnn_services': "/ml",
+        }
+        return result_allurl

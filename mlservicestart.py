@@ -2,8 +2,8 @@ from flask import Flask
 from flask_cors.extension import CORS
 
 from rest import blueprint
-from config_variable import bind_addr, bind_port, logger
-from rest_ml import *
+from configVariable import bind_addr, bind_port, logger
+from restML import *
 
 app = Flask(__name__)
 CORS(app)

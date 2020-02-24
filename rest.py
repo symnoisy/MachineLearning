@@ -1,7 +1,7 @@
 from flask_restplus import Api
 from flask.blueprints import Blueprint
 from flask import request
-from config_variable import logger
+from configVariable import logger
 
 blueprint = Blueprint('api', __name__)
 ml = Api(blueprint, doc='/swagger')
