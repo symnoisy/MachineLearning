@@ -4,9 +4,9 @@ from flask import request
 from config_variable import logger
 
 blueprint = Blueprint('api', __name__)
-rnn = Api(blueprint, doc='/swagger')
+ml = Api(blueprint, doc='/swagger')
 
-rnn = rnn.namespace('', description='RNN Service')
+ml = ml.namespace('', description='MachineLearning Service')
 
 @blueprint.before_request
 def requestauth(*args, **kwargs):

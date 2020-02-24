@@ -3,7 +3,7 @@ from flask_cors.extension import CORS
 
 from rest import blueprint
 from config_variable import bind_addr, bind_port, logger
-from rest_rnn import *
+from rest_ml import *
 
 app = Flask(__name__)
 CORS(app)
@@ -22,7 +22,7 @@ class Service():
         app.run(host=bind_addr, port=bind_port, debug=False)
 
     def start(self):
-        logger.info('RNN Service start.')
+        logger.info('ML Service start.')
         self.restInit()
 
 

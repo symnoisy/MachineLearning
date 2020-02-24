@@ -10,6 +10,6 @@ logger.addHandler(stream_hander2)
 
 #swagger
 bind_addr = '0.0.0.0'
-bind_port = '8888'
+bind_port = '9999'
 
 
